@@ -57,13 +57,12 @@ class Router implements IRouter
 
         }
 
-        if (count($urlParts) >= 1 && !empty($urlParts[0])) { // SI urlParts est supérieur à 1, c'est que j'ai un deuxième paramètre
+        if (count($urlParts) >= 1 && !empty($urlParts[0])) {
+            // SI urlParts est supérieur à 1, c'est que j'ai un deuxième paramètre
             // ET si il n'est pas vide, ALORS
 
-            // $urlParts[0] = empty($urlParts[0])?$action:$urlParts[0]; Revient au même que dans la condition
-
             // Récupération de l'Action
-            $this->actionName = $urlParts[1] ?? $this->actionName;
+            $this->actionName = Utils::camelized($urlParts[0]) . 'Action' ?? $this->actionName;
             // Suppression de l'Action
             array_shift($urlParts);
 
