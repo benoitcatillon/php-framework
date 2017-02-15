@@ -2,6 +2,7 @@
 
 // Utilisation des namespaces
 use myProject\Framework\Router;
+use myProject\Framework\Dispatcher;
 
 //Lancement de la session
 session_start();
@@ -22,14 +23,20 @@ include ROOT_PATH . '/vendor/autoload.php';
 //Récupération de l'url
 $url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL) ?? "/";
 
-var_dump($url);
+// var_dump($url);
+
 
 /************** Routage de l'application ******************/
 
 $router = new Router($url);
 
+$dispatcher = new Dispatcher($router, "myProject\\Forum\\Controllers\\");
+$dispatcher->dispatch();
+
+/*
 echo '<pre>';
 var_dump($router);
 echo '</pre>';
+*/
 
 ?>

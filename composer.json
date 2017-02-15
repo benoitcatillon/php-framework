@@ -12,7 +12,8 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "myProject\\Framework\\": "Framework/"
+      "myProject\\Framework\\": "Framework/",
+      "myProject\\Forum\\Controllers\\": "src/controllers"
     }
   }
 }

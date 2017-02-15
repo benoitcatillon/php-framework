@@ -6,22 +6,22 @@ namespace myProject\Framework;
 class Router implements IRouter
 {
 
-    /*
+    /**
      * @var string
      */
     private $controllerName = "DefaultController";
 
-    /*
+    /**
      * @var string
      */
     private $actionName = "indexAction";
 
-    /*
+    /**
      * @var array
      */
     private $actionParameters = [];
 
-    /*
+    /**
      * @var string
      */
     private $url;
