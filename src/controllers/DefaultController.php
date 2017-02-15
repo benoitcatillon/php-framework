@@ -2,13 +2,17 @@
 
 namespace myProject\Forum\Controllers;
 
+use myProject\Framework\View;
+
 
 class DefaultController
 {
 
     public function indexAction()
     {
-        echo "Je suis l'index du Controller par Default";
+        $view = new View();
+
+        echo $view->render('homeView', ['name' => 'Benoît']);
     }
 
     public function notFoundAction()
