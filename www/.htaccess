@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#Conditions d'application d'une règle de réécriture
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+# QSA permet d'injecter les paramètres d'origine passé dans l'url
+# L indique que la règle est finale, les autres règles ne seront pas évaluées
+RewriteRule ^(.*)$ /index.php?url=/$1 [QSA,L]
