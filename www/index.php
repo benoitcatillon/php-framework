@@ -15,6 +15,9 @@ include ROOT_PATH . '/vendor/autoload.php';
 // Inclusions des routes
 //$routes = require ROOT_PATH . '/config/routes.php';
 
+// TEST
+$result = MyUtils::camelized('ajout-du-client');
+
 
 //Récupération de l'url
 $url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL) ?? "/";
@@ -72,8 +75,6 @@ if (count($urlParts) >= 1 && !empty($urlParts[0])) {
 
 }
 
-
-$result = MyUtils::camelized('ajout-du-client');
 
 echo '<pre>';
 var_dump($result);
