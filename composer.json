@@ -17,7 +17,8 @@
   "autoload": {
     "psr-4": {
       "myProject\\Framework\\": "Framework/src/",
-      "myProject\\Forum\\Controllers\\": "src/controllers"
+      "myProject\\Forum\\Controllers\\": "src/controllers",
+      "myProject\\Forum\\Models\\": "src/models"
     }
   }
 }
