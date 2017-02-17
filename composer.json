@@ -10,9 +10,13 @@
     }
   ],
   "require": {},
+  "require-dev": {
+    "phpmd/phpmd": "@stable",
+    "phpunit/phpunit": "6.0.*"
+  },
   "autoload": {
     "psr-4": {
-      "myProject\\Framework\\": "Framework/",
+      "myProject\\Framework\\": "Framework/src/",
       "myProject\\Forum\\Controllers\\": "src/controllers"
     }
   }
