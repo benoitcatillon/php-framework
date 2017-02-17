@@ -24,4 +24,5 @@ class DefaultController
     {
         echo "J'affiche l'enregistrement dont l'id est $id";
     }
+
 }
