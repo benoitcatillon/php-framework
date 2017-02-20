@@ -12,6 +12,7 @@ define('ROOT_PATH', dirname(__DIR__));
 
 // Définition de l'auto-chargement des classes
 include ROOT_PATH . '/vendor/autoload.php';
+include ROOT_PATH . '/src/conf/config.php';
 
 // Inclusions des routes
 // $routes = require ROOT_PATH . '/config/routes.php';
